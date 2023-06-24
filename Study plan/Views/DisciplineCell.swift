@@ -190,7 +190,7 @@ class DisciplineCell: UICollectionViewCell {
     
     func createAttributedText(number1: Int, number2: Int) -> NSAttributedString {
         let fullText = "\(number1) / \(number2)"
-        
+    
         // Create an attributed string
         let attributedString = NSMutableAttributedString(string: fullText)
         

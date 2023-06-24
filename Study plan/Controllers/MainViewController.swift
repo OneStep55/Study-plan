@@ -77,6 +77,12 @@ class MainViewController: UIViewController {
            ]
         navigationController?.navigationBar.barTintColor = .orange
         
+        let image = UIImage(systemName: "arrow.down.doc")
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image,
+                                                            style: .done,
+                                                            target: self,
+                                                            action: nil)
     
         
         setHeaderActiveColor(color: .blue)
