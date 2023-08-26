@@ -78,8 +78,8 @@
             filePath = "Study plan/Views/DisciplineCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "configure(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "Study plan/Views/DisciplineCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "configure(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "Study plan/Views/DisciplineCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "createAttributedText(number1:number2:)"
             landmarkType = "7">
          </BreakpointContent>

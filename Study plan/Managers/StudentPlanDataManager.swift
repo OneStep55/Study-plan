@@ -24,7 +24,7 @@ class StudentPlanDataManager {
                         "DisciplineId": "5d762432cbbc35013c1dff3f",
                         "DisciplineName": {
                             "nameKk": "Электрохимия (ағылшын)",
-                            "nameRu": "Электрохимия на англ. Яз ",
+                            "nameRu": "Электрохимия на англ. Электрохимия на англ. Электрохимия на англ. Электрохимия на англ. Электрохимия на англ. Электрохимия на англ. Электрохимия на англ. ",
                             "nameEn": "Electrochemistry"
                         },
                         "Lesson": [

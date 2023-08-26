@@ -43,12 +43,14 @@ class MainViewController: UIViewController {
     private let collectionPage: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .white
         collectionView.isPagingEnabled = true
+        collectionView.alwaysBounceHorizontal = false
         collectionView.register(ContentCollectionViewCell.self,
                                 forCellWithReuseIdentifier: ContentCollectionViewCell.identifier)
         return collectionView
@@ -239,10 +241,6 @@ extension MainViewController: UICollectionViewDelegateFlowLayout{
                     if tabStyle == .fixed {
                         let spacer = CGFloat(semesters.count)
                         let width = view.frame.width / spacer
-                        let height = collectionHeader.frame.height - collectionView.contentInset.top - collectionView.contentInset.bottom
-                        return CGSize(width: width, height: height)
-                    } else {
-                        let width = view.frame.width * 20 / 100
                         let height = collectionHeader.frame.height - collectionView.contentInset.top - collectionView.contentInset.bottom
                         return CGSize(width: width, height: height)
                     }

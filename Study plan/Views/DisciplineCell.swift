@@ -16,12 +16,14 @@ class DisciplineCell: UICollectionViewCell {
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
+        label.contentMode = .center
         return label
     }()
     
     let separatorLine: UIView = {
            let view = UIView()
            view.backgroundColor = UIColor.gray
+        view.translatesAutoresizingMaskIntoConstraints = false
            return view
     }()
     
@@ -86,10 +88,7 @@ class DisciplineCell: UICollectionViewCell {
         
         configureConstrains()
         
-        separatorLine.frame = CGRect(x: 0,
-                                     y: contentView.frame.height - 1,
-                                     width: contentView.frame.width,
-                                     height: 1)
+
         
     }
     
@@ -114,42 +113,81 @@ class DisciplineCell: UICollectionViewCell {
     
     private func configureConstrains() {
         
-        let nameLabelConstrains = [
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            nameLabel.widthAnchor.constraint(equalToConstant: 180)
-        ]
+//        let nameLabelConstrains = [
+//
+//
+//            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
+////            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+//            nameLabel.widthAnchor.constraint(equalToConstant: 180),
+//            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+//            nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
+//        ]
+//
+//        let hoursLabel1Constrains = [
+//            hoursLabel1.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 25),
+//            hoursLabel1.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+//            hoursLabel1.widthAnchor.constraint(equalToConstant: 80)
+//        ]
+//
+//        let hoursLabel2Constrains = [
+//            hoursLabel2.leadingAnchor.constraint(equalTo: hoursLabel1.trailingAnchor, constant: 20),
+//            hoursLabel2.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+//            hoursLabel2.widthAnchor.constraint(equalToConstant:80)
+//        ]
+//
+//        let hoursLabel3Constrains = [
+//            hoursLabel3.leadingAnchor.constraint(equalTo: hoursLabel2.trailingAnchor, constant: 20),
+//            hoursLabel3.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+//            hoursLabel3.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+//            hoursLabel3.widthAnchor.constraint(equalToConstant:80)
+//        ]
         
-        let hoursLabel1Constrains = [
-            hoursLabel1.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 25),
-            hoursLabel1.centerYAnchor.constraint(equalTo: centerYAnchor),
-            hoursLabel1.widthAnchor.constraint(equalToConstant: 80)
-        ]
+        let nameLabelConstraints = [
+                nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
+                nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+                nameLabel.trailingAnchor.constraint(lessThanOrEqualTo: hoursLabel1.leadingAnchor, constant: -25),
+                nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
+                nameLabel.widthAnchor.constraint(equalToConstant: 130)
+            ]
+            
+            let hoursLabel1Constraints = [
+                hoursLabel1.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                hoursLabel1.widthAnchor.constraint(equalToConstant: 80),
+                hoursLabel1.trailingAnchor.constraint(equalTo: hoursLabel2.leadingAnchor, constant: -15)
+            ]
+            
+            let hoursLabel2Constraints = [
+                hoursLabel2.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                hoursLabel2.widthAnchor.constraint(equalToConstant: 80),
+                hoursLabel2.trailingAnchor.constraint(equalTo: hoursLabel3.leadingAnchor, constant: -15)
+            ]
+            
+            let hoursLabel3Constraints = [
+                hoursLabel3.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                hoursLabel3.widthAnchor.constraint(equalToConstant: 80),
+                hoursLabel3.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15)
+            ]
         
-        let hoursLabel2Constrains = [
-            hoursLabel2.leadingAnchor.constraint(equalTo: hoursLabel1.trailingAnchor, constant: 20),
-            hoursLabel2.centerYAnchor.constraint(equalTo: centerYAnchor),
-            hoursLabel2.widthAnchor.constraint(equalToConstant:80)
-        ]
         
-        let hoursLabel3Constrains = [
-            hoursLabel3.leadingAnchor.constraint(equalTo: hoursLabel2.trailingAnchor, constant: 20),
-            hoursLabel3.centerYAnchor.constraint(equalTo: centerYAnchor),
-            hoursLabel3.widthAnchor.constraint(equalToConstant:80)
-        ]
-        
+      
         
 
         
-        NSLayoutConstraint.activate(nameLabelConstrains)
-        NSLayoutConstraint.activate(hoursLabel1Constrains)
-        NSLayoutConstraint.activate(hoursLabel2Constrains)
-        NSLayoutConstraint.activate(hoursLabel3Constrains)
+        NSLayoutConstraint.activate(nameLabelConstraints)
+        NSLayoutConstraint.activate(hoursLabel1Constraints)
+        NSLayoutConstraint.activate(hoursLabel2Constraints)
+        NSLayoutConstraint.activate(hoursLabel3Constraints)
+        
+//        NSLayoutConstraint.activate([
+//            separatorLine.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -1),
+//            separatorLine.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+//            separatorLine.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+//            separatorLine.heightAnchor.constraint(equalToConstant: 1)
+//        ])
         
         addSeparatorLine(after: nameLabel)
         addSeparatorLine(after: hoursLabel1)
         addSeparatorLine(after: hoursLabel2)
-        addSeparatorLine(after: hoursLabel3)
     }
 
     func configure(with discipline: Discipline) {
@@ -164,6 +202,7 @@ class DisciplineCell: UICollectionViewCell {
         num2 = Int(discipline.lesson[1].hours)!
         hoursLabel2.attributedText = createAttributedText(number1: num1, number2: num2)
         
+        hoursLabel3.text = ""
         if discipline.lesson.count > 2 {
             num1 = Int(discipline.lesson[2].realHours)!
             num2 = Int(discipline.lesson[2].hours)!

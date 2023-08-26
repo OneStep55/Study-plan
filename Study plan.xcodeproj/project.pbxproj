@@ -24,6 +24,8 @@
 		4D7172812A47051C004CA47E /* CollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7172802A47051C004CA47E /* CollectionHeader.swift */; };
 		4D7172832A471590004CA47E /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7172822A471590004CA47E /* HeaderCollectionViewCell.swift */; };
 		4D8EB0FD2A46CD8F006B2588 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8EB0FC2A46CD8F006B2588 /* HeaderView.swift */; };
+		4D9CCFF72A9A5F4F007E8DBF /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CCFF62A9A5F4F007E8DBF /* CollectionViewCell.swift */; };
+		4D9CCFF92A9A5F7F007E8DBF /* StickyGridCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CCFF82A9A5F7F007E8DBF /* StickyGridCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		4D7172802A47051C004CA47E /* CollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeader.swift; sourceTree = "<group>"; };
 		4D7172822A471590004CA47E /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D8EB0FC2A46CD8F006B2588 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		4D9CCFF62A9A5F4F007E8DBF /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4D9CCFF82A9A5F7F007E8DBF /* StickyGridCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyGridCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 				4D4F14442A4388A100D57695 /* DisciplineCell.swift */,
 				4D8EB0FC2A46CD8F006B2588 /* HeaderView.swift */,
 				4D7172802A47051C004CA47E /* CollectionHeader.swift */,
+				4D9CCFF62A9A5F4F007E8DBF /* CollectionViewCell.swift */,
+				4D9CCFF82A9A5F7F007E8DBF /* StickyGridCollectionViewLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,11 +322,13 @@
 				4D7172832A471590004CA47E /* HeaderCollectionViewCell.swift in Sources */,
 				4D4F14012A42F3E900D57695 /* AppDelegate.swift in Sources */,
 				4D4F14362A435BF300D57695 /* TestViewControllerOne.swift in Sources */,
+				4D9CCFF92A9A5F7F007E8DBF /* StickyGridCollectionViewLayout.swift in Sources */,
 				4D7172812A47051C004CA47E /* CollectionHeader.swift in Sources */,
 				4D4F143D2A43691E00D57695 /* ContentCollectionViewCell.swift in Sources */,
 				4D4F14322A43597800D57695 /* MainViewController.swift in Sources */,
 				4D4F14402A437F7900D57695 /* StudentPlan.swift in Sources */,
 				4D8EB0FD2A46CD8F006B2588 /* HeaderView.swift in Sources */,
+				4D9CCFF72A9A5F4F007E8DBF /* CollectionViewCell.swift in Sources */,
 				4D4F14432A43821F00D57695 /* StudentPlanDataManager.swift in Sources */,
 				4D4F14452A4388A100D57695 /* DisciplineCell.swift in Sources */,
 				4D4F14382A435C8200D57695 /* TestVIewControllerTwo.swift in Sources */,
